@@ -1,4 +1,4 @@
-# location_app.py
+
 
 class Location:
     increment_id = 1
@@ -10,7 +10,7 @@ class Location:
         self.objet = objet
         self.date_debut = date_debut
         self.date_fin = date_fin
-        self.etat = "disponible"  # état par défaut
+        self.etat = "disponible" 
 
     def __str__(self):
         return f"#{self.id} - {self.client} a loué {self.objet} du {self.date_debut} au {self.date_fin} [{self.etat}]"
@@ -36,10 +36,10 @@ class LocationApp:
     def changer_etat(self, id, nouvel_etat):
         for loc in self.locations:
             if loc.id == id:
-                print(f"🔄 État de la location #{id} changé de '{loc.etat}' à '{nouvel_etat}'")
+                print(f" État de la location #{id} changé de '{loc.etat}' à '{nouvel_etat}'")
                 loc.etat = nouvel_etat
                 return
-        print(f"❌ Aucune location trouvée avec l'ID {id}")
+        print(f" Aucune location trouvée avec l'ID {id}")
 
 
 # Exemple d'utilisation
